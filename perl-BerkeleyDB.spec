@@ -4,8 +4,8 @@
 Summary:	BerkeleyDB - Perl extension for Berkeley DB version 2, 3 or 4
 Summary(pl):	BerkeleyDB - rozszerzenie Perla do baz Berkeley DB w wersji 2, 3 lub 4
 Name:		perl-BerkeleyDB
-Version:	0.19
-Release:	6
+Version:	0.20
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
@@ -40,11 +40,8 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_mandir}/man3
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-
-pod2man --section=3pm BerkeleyDB.pod >$RPM_BUILD_ROOT%{_mandir}/man3/BerkeleyDB.3pm
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -55,7 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitearch}/BerkeleyDB
 %{perl_sitearch}/BerkeleyDB.pm
 %dir %{perl_sitearch}/auto/BerkeleyDB
-%{perl_sitearch}/auto/BerkeleyDB/autosplit.ix
 %{perl_sitearch}/auto/BerkeleyDB/*.bs
 %attr(755,root,root) %{perl_sitearch}/auto/BerkeleyDB/*.so
 %{_mandir}/man3/*
