@@ -17,7 +17,7 @@ Version:	0.20
 Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 BuildRequires:	db3-devel
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 3.0.3-16
