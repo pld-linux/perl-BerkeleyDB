@@ -13,12 +13,12 @@
 Summary:	BerkeleyDB - Perl extension for Berkeley DB version 2, 3 or 4
 Summary(pl):	BerkeleyDB - rozszerzenie Perla do baz Berkeley DB w wersji 2, 3 lub 4
 Name:		perl-BerkeleyDB
-Version:	0.20
-Release:	4
+Version:	0.23
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	a9d68147127cadfa790dc7fcd2ad89bf
+# Source0-md5:	d97b85ea5b61bde7de4a998c91ef29c7
 BuildRequires:	db-devel
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
