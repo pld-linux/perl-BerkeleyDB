@@ -20,7 +20,7 @@ Summary(uk):	Модуль для Perl BerkeleyDB
 Summary(zh_CN):	BerkeleyDB Perl дё©И
 Name:		perl-BerkeleyDB
 Version:	0.19
-Release:	3
+Release:	4
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
@@ -104,5 +104,7 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitearch}/BerkeleyDB
 %{perl_sitearch}/BerkeleyDB.pm
 %dir %{perl_sitearch}/auto/BerkeleyDB
+%{perl_sitearch}/auto/BerkeleyDB/autosplit.ix
+%{perl_sitearch}/auto/BerkeleyDB/*.bs
 %attr(755,root,root) %{perl_sitearch}/auto/BerkeleyDB/*.so
 %{_mandir}/man3/*
