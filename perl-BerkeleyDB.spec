@@ -44,7 +44,7 @@ dopiero w DB 3.x lub DB 4.x nie bêd± dostêpne poprzez ten modu³.
 %setup -q -n %{pnam}-%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}" CC="%{__cc}"
 
 %{!?_without_tests:%{__make} test}
