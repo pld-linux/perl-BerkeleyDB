@@ -9,8 +9,8 @@
 #%endif
 
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	BerkeleyDB
-%define		pnam	BerkeleyDB
+%define	pdir	BerkeleyDB
+%define	pnam	BerkeleyDB
 Summary:	BerkeleyDB - Perl extension for Berkeley DB version 2, 3 or 4
 Summary(pl):	BerkeleyDB - rozszerzenie Perla do baz Berkeley DB w wersji 2, 3 lub 4
 Name:		perl-BerkeleyDB
