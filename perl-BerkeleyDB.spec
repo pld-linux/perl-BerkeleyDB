@@ -3,7 +3,7 @@ Summary:	Berkeley Database perl module
 Summary(pl):	Modu³ perla BerkeleyDB
 Name:		perl-BerkeleyDB
 Version:	0.18
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/BerkeleyDB/BerkeleyDB-%{version}.tar.gz
