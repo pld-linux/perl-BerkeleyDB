@@ -46,7 +46,7 @@ dopiero w DB 3.x lub DB 4.x nie bêd± dostêpne poprzez ten modu³.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make} OPTIMIZE="%{rpmcflags}" CC="%{__cc}"
 
 %{!?_without_tests:%{__make} test}
