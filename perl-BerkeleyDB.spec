@@ -20,7 +20,7 @@ Summary(uk):	Модуль для Perl BerkeleyDB
 Summary(zh_CN):	BerkeleyDB Perl дё©И
 Name:		perl-BerkeleyDB
 Version:	0.19
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
@@ -89,8 +89,11 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_mandir}/man3
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
+
+pod2man --section=3pm BerkeleyDB.pod >$RPM_BUILD_ROOT%{_mandir}/man3/BerkeleyDB.3pm
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -99,7 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README Changes Todo
 %{perl_sitearch}/BerkeleyDB
-%{perl_sitearch}/BerkeleyDB.*
+%{perl_sitearch}/BerkeleyDB.pm
 %dir %{perl_sitearch}/auto/BerkeleyDB
-%{perl_sitearch}/auto/BerkeleyDB/*.ix
 %attr(755,root,root) %{perl_sitearch}/auto/BerkeleyDB/*.so
+%{_mandir}/man3/*
