@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	BerkeleyDB
 %define		pnam	BerkeleyDB
@@ -5,7 +9,7 @@ Summary:	BerkeleyDB - Perl extension for Berkeley DB version 2, 3 or 4
 Summary(pl):	BerkeleyDB - rozszerzenie Perla do baz Berkeley DB w wersji 2, 3 lub 4
 Name:		perl-BerkeleyDB
 Version:	0.20
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
@@ -38,6 +42,8 @@ dopiero w DB 3.x lub DB 4.x nie bêd± dostêpne poprzez ten modu³.
 perl Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}" CC="%{__cc}"
 
+%{!?_without_tests:%{__make} test}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
@@ -53,5 +59,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitearch}/BerkeleyDB.pm
 %dir %{perl_sitearch}/auto/BerkeleyDB
 %{perl_sitearch}/auto/BerkeleyDB/*.bs
+%{perl_sitearch}/auto/BerkeleyDB/autosplit.ix
 %attr(755,root,root) %{perl_sitearch}/auto/BerkeleyDB/*.so
 %{_mandir}/man3/*
