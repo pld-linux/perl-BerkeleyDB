@@ -1,26 +1,10 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	BerkeleyDB
 %define		pnam	BerkeleyDB
-Summary:	BerkeleyDB Perl module
-Summary(cs):	Modul BerkeleyDB pro Perl
-Summary(da):	Perlmodul BerkeleyDB
-Summary(de):	BerkeleyDB Perl Modul
-Summary(es):	Módulo de Perl BerkeleyDB
-Summary(fr):	Module Perl BerkeleyDB
-Summary(it):	Modulo di Perl BerkeleyDB
-Summary(ja):	BerkeleyDB Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	BerkeleyDB ÆŞ ¸ğÁÙ
-Summary(no):	Perlmodul BerkeleyDB
-Summary(pl):	Modu³ Perla BerkeleyDB
-Summary(pt):	Módulo de Perl BerkeleyDB
-Summary(pt_BR):	Módulo Perl BerkeleyDB
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl BerkeleyDB
-Summary(sv):	BerkeleyDB Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl BerkeleyDB
-Summary(zh_CN):	BerkeleyDB Perl Ä£¿é
+Summary:	BerkeleyDB - Perl extension for Berkeley DB version 2, 3 or 4
 Name:		perl-BerkeleyDB
 Version:	0.19
-Release:	4
+Release:	5
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
@@ -30,55 +14,12 @@ BuildRequires:	db3-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Berkeley Database perl module.
-
-%description -l cs
-Modul BerkeleyDB pro Perl.
-
-%description -l da
-Perlmodul BerkeleyDB.
-
-%description -l de
-BerkeleyDB Perl Modul.
-
-%description -l es
-Módulo de Perl BerkeleyDB.
-
-%description -l fr
-Module Perl BerkeleyDB.
-
-%description -l it
-Modulo di Perl BerkeleyDB.
-
-%description -l ja
-BerkeleyDB Perl ¥â¥¸¥å¡¼¥ë
-
-%description -l ko
-BerkeleyDB ÆŞ ¸ğÁÙ.
-
-%description -l no
-Perlmodul BerkeleyDB.
-
-%description -l pl
-Modu³ perla BerkeleyDB.
-
-%description -l pt
-Módulo de Perl BerkeleyDB.
-
-%description -l pt_BR
-Módulo Perl BerkeleyDB.
-
-%description -l ru
-íÏÄÕÌØ ÄÌÑ Perl BerkeleyDB.
-
-%description -l sv
-BerkeleyDB Perlmodul.
-
-%description -l uk
-íÏÄÕÌØ ÄÌÑ Perl BerkeleyDB.
-
-%description -l zh_CN
-BerkeleyDB Perl Ä£¿é
+This Perl module provides an interface to most of the functionality
+available in Berkeley DB versions 2, 3 and 4. In general it is safe to
+assume that the interface provided here to be identical to the Berkeley DB
+interface. The main changes have been to make the Berkeley DB API work in
+a Perl way. Note that if you are using Berkeley DB 2.x, the new features
+available in Berkeley DB 3.x or DB 4.x are not available via this module.
 
 %prep
 %setup -q -n %{pnam}-%{version}
