@@ -2,25 +2,20 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-
-# please check again
-#%ifarch ppc
-#%%undefine	with_tests
-#%endif
-
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	BerkeleyDB
 %define		pnam	BerkeleyDB
 Summary:	BerkeleyDB - Perl extension for Berkeley DB version 2, 3 or 4
 Summary(pl):	BerkeleyDB - rozszerzenie Perla do baz Berkeley DB w wersji 2, 3 lub 4
 Name:		perl-BerkeleyDB
-Version:	0.27
+Version:	0.29
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	43aa72c0c6941af0d656d749ad543e96
+# Source0-md5:	50e28e6d63ae5ac9667210c862577f2c
+URL:		http://search.cpan.org/dist/BerkeleyDB/
 BuildRequires:	db-devel
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -61,6 +56,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/BerkeleyDB.pod
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/BerkeleyDB/.packlist
 
 %clean
 rm -rf $RPM_BUILD_ROOT
