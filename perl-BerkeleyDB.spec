@@ -9,7 +9,7 @@ Summary:	BerkeleyDB - Perl extension for Berkeley DB version 2, 3 or 4
 Summary(pl):	BerkeleyDB - rozszerzenie Perla do baz Berkeley DB w wersji 2, 3 lub 4
 Name:		perl-BerkeleyDB
 Version:	0.29
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
