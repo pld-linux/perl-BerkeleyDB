@@ -6,7 +6,7 @@
 %define		pdir	BerkeleyDB
 %define		pnam	BerkeleyDB
 Summary:	BerkeleyDB - Perl extension for Berkeley DB version 2, 3 or 4
-Summary(pl):	BerkeleyDB - rozszerzenie Perla do baz Berkeley DB w wersji 2, 3 lub 4
+Summary(pl.UTF-8):   BerkeleyDB - rozszerzenie Perla do baz Berkeley DB w wersji 2, 3 lub 4
 Name:		perl-BerkeleyDB
 Version:	0.29
 Release:	2
@@ -30,13 +30,13 @@ DB API work in a Perl way. Note that if you are using Berkeley DB 2.x,
 the new features available in Berkeley DB 3.x or DB 4.x are not
 available via this module.
 
-%description -l pl
-Ten modu³ Perla dostarcza interfejs do wiêkszo¶ci funkcjonalno¶ci
-dostêpnej w bazach danych Berkeley DB w wersji 2, 3 i 4. Mo¿na
-przyj±æ, ¿e ten interfejs jest identyczny z interfejsem Berkeley DB.
-G³ówne zmiany zosta³y poczynione po to, by API DB dzia³a³o na sposób
-perlowy. W przypadku u¿ywania Berkeley DB 2.x nowe mo¿liwo¶ci dostêpne
-dopiero w DB 3.x lub DB 4.x nie bêd± dostêpne poprzez ten modu³.
+%description -l pl.UTF-8
+Ten moduÅ‚ Perla dostarcza interfejs do wiÄ™kszoÅ›ci funkcjonalnoÅ›ci
+dostÄ™pnej w bazach danych Berkeley DB w wersji 2, 3 i 4. MoÅ¼na
+przyjÄ…Ä‡, Å¼e ten interfejs jest identyczny z interfejsem Berkeley DB.
+GÅ‚Ã³wne zmiany zostaÅ‚y poczynione po to, by API DB dziaÅ‚aÅ‚o na sposÃ³b
+perlowy. W przypadku uÅ¼ywania Berkeley DB 2.x nowe moÅ¼liwoÅ›ci dostÄ™pne
+dopiero w DB 3.x lub DB 4.x nie bÄ™dÄ… dostÄ™pne poprzez ten moduÅ‚.
 
 %prep
 %setup -q -n %{pnam}-%{version}
