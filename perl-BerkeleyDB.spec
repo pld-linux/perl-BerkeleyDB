@@ -16,6 +16,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 # Source0-md5:	df74b8d381d08b17ada69185b45e06a6
 URL:		http://search.cpan.org/dist/BerkeleyDB/
+#requires_eq	db
 BuildRequires:	db-devel
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
