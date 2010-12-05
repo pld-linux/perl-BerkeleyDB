@@ -8,15 +8,14 @@
 Summary:	BerkeleyDB - Perl extension for Berkeley DB version 2, 3 or 4
 Summary(pl.UTF-8):	BerkeleyDB - rozszerzenie Perla do baz Berkeley DB w wersji 2, 3 lub 4
 Name:		perl-BerkeleyDB
-Version:	0.39
-Release:	5
+Version:	0.43
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	da4cff937216a147162a6df76cae8096
+Source0:	http://www.cpan.org/modules/by-module/BerkeleyDB/PMQS/%{pnam}-%{version}.tar.gz
+# Source0-md5:	3d0cf0651ed8cd3fc36e328d5924a1e9
 URL:		http://search.cpan.org/dist/BerkeleyDB/
-#requires_eq	db
 BuildRequires:	db-devel
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -58,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/BerkeleyDB.pod
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/BerkeleyDB.pod
 rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/BerkeleyDB/.packlist
 
 %clean
@@ -73,4 +72,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/auto/BerkeleyDB/*.bs
 %{perl_vendorarch}/auto/BerkeleyDB/autosplit.ix
 %attr(755,root,root) %{perl_vendorarch}/auto/BerkeleyDB/*.so
-%{_mandir}/man3/*
+%{_mandir}/man3/BerkeleyDB.3pm*
