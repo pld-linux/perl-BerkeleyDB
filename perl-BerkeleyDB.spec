@@ -5,15 +5,15 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	BerkeleyDB
 %define		pnam	BerkeleyDB
-Summary:	BerkeleyDB - Perl extension for Berkeley DB version 2, 3 or 4
-Summary(pl.UTF-8):	BerkeleyDB - rozszerzenie Perla do baz Berkeley DB w wersji 2, 3 lub 4
+Summary:	BerkeleyDB - Perl extension for Berkeley DB version 2, 3, 4 or 5
+Summary(pl.UTF-8):	BerkeleyDB - rozszerzenie Perla do baz Berkeley DB w wersji 2, 3, 4 lub 5
 Name:		perl-BerkeleyDB
 Version:	0.50
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/BerkeleyDB/PMQS/%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/BerkeleyDB/%{pnam}-%{version}.tar.gz
 # Source0-md5:	6afc8f49133c262c606d1b96e1412863
 URL:		http://search.cpan.org/dist/BerkeleyDB/
 BuildRequires:	db-devel
@@ -23,8 +23,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This Perl module provides an interface to most of the functionality
-available in Berkeley DB versions 2, 3 and 4. In general it is safe to
-assume that the interface provided here to be identical to the
+available in Berkeley DB versions 2, 3, 4 and 5. In general it is safe
+to assume that the interface provided here to be identical to the
 Berkeley DB interface. The main changes have been to make the Berkeley
 DB API work in a Perl way. Note that if you are using Berkeley DB 2.x,
 the new features available in Berkeley DB 3.x or DB 4.x are not
@@ -32,7 +32,7 @@ available via this module.
 
 %description -l pl.UTF-8
 Ten moduł Perla dostarcza interfejs do większości funkcjonalności
-dostępnej w bazach danych Berkeley DB w wersji 2, 3 i 4. Można
+dostępnej w bazach danych Berkeley DB w wersji 2, 3, 4 i 5. Można
 przyjąć, że ten interfejs jest identyczny z interfejsem Berkeley DB.
 Główne zmiany zostały poczynione po to, by API DB działało na sposób
 perlowy. W przypadku używania Berkeley DB 2.x nowe możliwości dostępne
