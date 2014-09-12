@@ -69,7 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/BerkeleyDB
 %{perl_vendorarch}/BerkeleyDB.pm
 %dir %{perl_vendorarch}/auto/BerkeleyDB
-%{perl_vendorarch}/auto/BerkeleyDB/*.bs
 %{perl_vendorarch}/auto/BerkeleyDB/autosplit.ix
 %attr(755,root,root) %{perl_vendorarch}/auto/BerkeleyDB/*.so
 %{_mandir}/man3/BerkeleyDB.3pm*
