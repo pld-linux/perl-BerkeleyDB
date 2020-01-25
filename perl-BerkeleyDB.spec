@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	BerkeleyDB
 %define		pnam	BerkeleyDB
 Summary:	BerkeleyDB - Perl extension for Berkeley DB version (version 2 or greater)
